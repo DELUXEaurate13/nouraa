@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08090c">
+    <title>Leave a Note — Noura</title>
+
+    <link rel="stylesheet" href="notes.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-grid"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="brand-mark">N.</span>
+            <span>NOURA<span class="brand-muted"> / NOTES</span></span>
+        </a>
+
+        <a href="index.html" class="back-link">
+            <span>←</span> Back to Portfolio
+        </a>
+    </header>
+
+    <main class="notes-page">
+
+        <section class="hero">
+            <span class="eyebrow">
+                <span class="status-dot"></span>
+                A LITTLE SPACE FOR YOUR WORDS
+            </span>
+
+            <h1>Leave Something<br><span>Behind.</span></h1>
+
+            <p class="hero-description">
+                A thought, a memory, a little encouragement.
+                Leave a note and make this little corner of the internet yours.
+            </p>
+
+            <div class="hero-meta">
+                <span>01 — WRITE</span>
+                <span class="meta-line"></span>
+                <span>02 — SHARE</span>
+                <span class="meta-line"></span>
+                <span>03 — REMEMBER</span>
+            </div>
+        </section>
+
+        <section class="write-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">01 / YOUR MESSAGE</span>
+                    <h2>Write a little something.</h2>
+                </div>
+
+                <span class="glass-label">YOUR SPACE</span>
+            </div>
+
+            <form id="note-form" class="note-form">
+                <div class="form-top">
+                    <div class="field-group">
+                        <label for="note-name">YOUR NAME</label>
+                        <input
+                            type="text"
+                            id="note-name"
+                            name="name"
+                            maxlength="60"
+                            placeholder="What should I call you?"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-symbol">✳</div>
+                </div>
+
+                <div class="field-group message-field">
+                    <div class="label-row">
+                        <label for="note-message">YOUR NOTE</label>
+                        <span id="character-count">0 / 500</span>
+                    </div>
+
+                    <textarea
+                        id="note-message"
+                        name="message"
+                        maxlength="500"
+                        rows="5"
+                        placeholder="Leave a thought, a kind word, or anything you'd like to share..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-bottom">
+                    <p>Your words matter. Keep them kind.</p>
+                    <button type="submit" class="send-button">
+                        <span>Send Note</span>
+                        <span class="send-arrow">↗</span>
+                    </button>
+                </div>
+
+                <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="wall-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">02 / THE COMMUNITY</span>
+                    <h2>Notes from people.</h2>
+                    <p class="section-description">
+                        Small messages, little reminders, words worth keeping.
+                    </p>
+                </div>
+
+                <span class="note-count" id="note-count">00 NOTES</span>
+            </div>
+
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">✳</div>
+                <h3>The wall is waiting.</h3>
+                <p>Be the first to leave a little something here.</p>
+            </div>
+
+            <div id="notes-wall" class="notes-wall"></div>
+
+            <div class="wall-footer">
+                <span>EVERY NOTE LEAVES A LITTLE LIGHT.</span>
+                <span>✳</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html">NOURA<span>© 2026</span></a>
+        <p>Made with care, one line at a time.</p>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="notes.js"></script>
+</body>
+</html>
+
